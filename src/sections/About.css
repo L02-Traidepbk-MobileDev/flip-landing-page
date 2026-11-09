@@ -1,0 +1,184 @@
+.about {
+    padding: 80px 32px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(40px, 6vw, 90px);
+
+    max-width: 1176px;
+    margin: 0 auto;
+    padding: clamp(28px, 4vw, 56px);
+
+    border-radius: 28px;
+    background-color: rgb(255 250 246 / 85%);
+}
+
+.about-content {
+    min-width: 0;
+}
+
+.about-label {
+    margin: 0 0 20px;
+    color: #A55D75;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.about-title {
+    margin: 0 0 28px;
+    color: #493641;
+
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(32px, 3.8vw, 50px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.2;
+}
+
+.about-title em {
+    color: #E91E63;
+    font-weight: inherit;
+}
+
+.about-description {
+    margin: 0 0 16px;
+    color: #79616E;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.about-message {
+    margin: 26px 0 0;
+    padding-left: 16px;
+    border-left: 2px solid #A55D75;
+
+    color: #A55D75;
+    font-family: 'Playfair Display';
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Ba điểm giới thiệu */
+
+.about-highlights {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 26px 0;
+}
+
+.about-item+.about-item {
+    border-top: 1px solid #FFDDE4;
+}
+
+.about-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    color: #E91E63;
+}
+
+.about-icon .MuiSvgIcon-root {
+    font-size: 28px;
+}
+
+.about-item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-item h3 {
+    margin: 0 0 8px;
+    color: #493641;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.about-item p {
+    margin: 0;
+    color: #79616E;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Máy tính bảng */
+
+@media (max-width: 1024px) {
+    .about {
+        padding: 56px 24px;
+    }
+
+    .about-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .about-title {
+        font-size: clamp(32px, 5vw, 44px);
+    }
+}
+
+/* Điện thoại */
+
+@media (max-width: 480px) {
+    .about {
+        padding: 40px 20px;
+    }
+
+    .about-container {
+        gap: 18px;
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+
+    .about-label {
+        margin-bottom: 16px;
+        font-size: 10px;
+    }
+
+    .about-title {
+        margin-bottom: 22px;
+        font-size: 32px;
+    }
+
+    .about-description {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .about-message {
+        font-size: 18px;
+    }
+
+    .about-item {
+        gap: 14px;
+    }
+
+    .about-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .about-icon .MuiSvgIcon-root {
+        font-size: 25px;
+    }
+
+    .about-item h3 {
+        font-size: 15px;
+    }
+
+    .about-item p {
+        font-size: 12px;
+    }
+}

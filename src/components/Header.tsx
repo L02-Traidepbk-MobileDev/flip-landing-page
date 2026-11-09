@@ -4,7 +4,6 @@ import './Header.css';
 const menuItems = [
     { href: '#home', label: 'Trang chủ' },
     { href: '#about', label: 'Về Flip' },
-    { href: '#features', label: 'Điểm nổi bật' },
     { href: '#how-it-works', label: 'Cách hoạt động' },
     { href: '#screens', label: 'Giao diện' },
     { href: '#team', label: 'Đội ngũ' },

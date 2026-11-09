@@ -57,6 +57,8 @@ function HeroSection() {
                 </h1>
 
                 <p className="hero-subtitle">
+                    Một ly cà phê - một góc cửa sổ - một người cũng ở đây
+                    <br />
                     Mọi kết nối đều có thể bắt đầu từ điều rất nhỏ
                 </p>
 

@@ -11,7 +11,7 @@
     width: 100%;
     max-width: 1240px;
     margin: 50px auto;
-    padding: 50px 75px;
+    padding: 45px 75px;
 }
 
 /* =========================
@@ -71,7 +71,7 @@
     margin: 30px 0 0;
     color: #604A57;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.6;
 }
 
@@ -83,7 +83,7 @@
 
     color: #A55D75;
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 600;
     font-style: italic;
     line-height: 1.5;
