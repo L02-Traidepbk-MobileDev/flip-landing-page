@@ -1,0 +1,217 @@
+.features {
+    padding: 80px 32px;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    grid-template-areas: 'cards heading';
+    align-items: center;
+    gap: clamp(32px, 5vw, 72px);
+
+    max-width: 1176px;
+    margin: 0 auto;
+}
+
+/* Tiêu đề */
+
+.features-heading {
+    grid-area: heading;
+    min-width: 0;
+}
+
+.features-label {
+    margin: 0 0 20px;
+    color: #A55D75;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+.features-title {
+    margin: 0;
+    color: #493641;
+    font-family: 'Playfair Display';
+    font-size: clamp(32px, 3.5vw, 46px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.2;
+}
+
+.features-title em {
+    display: block;
+    margin-top: 8px;
+    color: #E91E63;
+    font-weight: inherit;
+}
+
+.features-description {
+    max-width: 360px;
+    margin: 24px 0 0;
+    color: #604A57;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.features-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 44px;
+    margin-top: 24px;
+
+    color: #A55D75;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.features-link span {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #EAA5BA;
+    border-radius: 50%;
+    font-size: 21px;
+
+    transition: background-color 0.2s ease;
+}
+
+.features-link:focus-visible {
+    outline: 2px solid #FFDDE4;
+    outline-offset: 5px;
+}
+
+/* Grid bốn ô */
+
+.features-grid {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 26px 24px;
+
+    border-radius: 22px;
+    background-color: rgb(255 250 246);
+
+    box-shadow: 0 6px 14px -6px rgba(235, 114, 156, 0.4);
+}
+
+/* Hai ô chéo có nền hồng nhẹ */
+
+.feature-card:nth-child(2),
+.feature-card:nth-child(3) {
+    background-color: #FFF0F3;
+}
+
+.feature-card h3 {
+    margin: 0 0 12px;
+    color: #82465B;
+    font-family: 'Playfair Display';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.feature-description {
+    margin: 0 0 22px;
+    color: #604A57;
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+.feature-tag {
+    margin-top: auto;
+    color: #A55D75;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+/* Tablet: tiêu đề lên trên, grid bên dưới */
+
+@media (max-width: 900px) {
+    .features {
+        padding: 56px 24px;
+    }
+
+    .features-container {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            'heading'
+            'cards';
+        gap: 32px;
+    }
+
+    .features-heading {
+        max-width: 560px;
+    }
+
+    .features-description {
+        max-width: 480px;
+    }
+
+    .features-title {
+        font-size: clamp(32px, 5vw, 42px);
+    }
+}
+
+/* RESPONSIVE ĐIỆN THOẠI */
+
+@media (max-width: 480px) {
+    .features {
+        padding: 48px 20px;
+    }
+
+    .features-label {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .features-title {
+        font-size: 32px;
+    }
+
+    .features-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .feature-card {
+        padding: 24px;
+        border-radius: 18px;
+    }
+
+    .feature-icon {
+        margin-bottom: 14px;
+    }
+
+    .feature-card:nth-child(n) {
+        background-color: #fffaf6;
+    }
+
+    .feature-card:nth-child(even) {
+        background-color: #fcecf1;
+    }
+}
+
+/* Giảm chuyển động */
+
+@media (prefers-reduced-motion: reduce) {
+    .features-link span {
+        transition: none;
+    }
+}

@@ -1,0 +1,341 @@
+.download {
+    padding: 72px 32px 64px;
+    scroll-margin-top: 100px;
+}
+
+.download-banner {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 32px;
+
+    width: 100%;
+    max-width: 1176px;
+    margin: 0 auto;
+    padding: 48px 56px;
+
+    border-radius: 30px;
+    background-color: rgb(98 13 42 / 85%);
+}
+
+.download-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    pointer-events: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 180px 180px;
+
+    opacity: 0.3;
+    mix-blend-mode: soft-light;
+}
+
+/* NỘI DUNG */
+
+.download-content,
+.download-visual {
+    position: relative;
+    z-index: 1;
+}
+
+.download-label {
+    margin: 0 0 22px;
+    color: #FFDDE4;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+.download-title {
+    margin: 0;
+    color: #FFF6F7;
+
+    font-family: 'Playfair Display';
+    font-size: clamp(30px, 3.3vw, 44px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.25;
+}
+
+.download-title em {
+    display: block;
+    margin-top: 6px;
+    color: #F9B1C8;
+    font-weight: inherit;
+}
+
+.download-actions {
+    margin-top: 28px;
+}
+
+/* NÚT TẢI ỨNG DỤNG */
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+
+    min-height: 48px;
+    max-width: 100%;
+    padding: 13px 26px;
+
+    border-radius: 999px;
+    background-color: #FFF6F7;
+    color: #620D2A;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.download-button .MuiSvgIcon-root {
+    flex-shrink: 0;
+    font-size: 22px;
+}
+
+.download-button:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+a.download-button:hover {
+    background-color: #ffe5ee;
+    transform: translateY(-2px);
+}
+
+.download-button:focus-visible {
+    outline: 2px solid #ffb6cf;
+    outline-offset: 5px;
+}
+
+.download-note {
+    margin: 12px 0 0;
+    color: #dfb7c9;
+
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+/* HÌNH BÊN PHẢI */
+
+.download-visual {
+    position: relative;
+    min-width: 0;
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1 / 1.08;
+    justify-self: center;
+}
+
+.download-phone {
+    position: absolute;
+    display: block;
+
+    width: 49%;
+    height: auto;
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 5px 4px rgb(20 5 14 / 35%)) 
+        drop-shadow(0 18px 14px rgb(20 5 14 / 45%));
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Welcome */
+
+.download-phone-welcome {
+    z-index: 1;
+    top: 8%;
+    left: 5%;
+    transform: rotate(-8deg);
+}
+
+/* Match */
+
+.download-phone-match {
+    z-index: 2;
+    top: 4%;
+    right: 4%;
+    transform: rotate(6deg);
+}
+
+/* Hình Cupid */
+.download-cupid {
+    position: absolute;
+    z-index: 2;
+    left: -20%;
+    bottom: 0;
+
+    display: block;
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 4px 3px rgb(20 5 14 / 35%)) drop-shadow(0 12px 9px rgb(20 5 14 / 45%));
+
+    user-select: none;
+    pointer-events: none;
+}
+
+/* RESPONSIVE TABLET*/
+
+@media (max-width: 1000px) {
+    .download-banner {
+        gap: 24px;
+        padding: 40px 32px;
+    }
+
+    .download-title {
+        font-size: 34px;
+    }
+
+    .download-label {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .download-description {
+        font-size: 12px;
+    }
+}
+
+/* Chuyển thành một cột */
+
+@media (max-width: 760px) {
+    .download {
+        padding: 56px 24px;
+    }
+
+    .download-banner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding: 40px 32px 28px;
+    }
+
+    .download-content {
+        text-align: center;
+    }
+
+    .download-title {
+        font-size: clamp(30px, 5.5vw, 40px);
+    }
+
+    .download-description {
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .download-visual {
+        max-width: 380px;
+    }
+
+    .download-cupid {
+        left: -5%;
+        width: 37%;
+    }
+}
+
+/* RESPONSIVE ĐIỆN THOẠI */
+
+@media (max-width: 760px) {
+    .download-banner {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .download {
+        padding: 48px 20px;
+    }
+
+    .download-banner {
+        gap: 24px;
+        padding: 32px 20px 24px;
+        border-radius: 24px;
+        margin-bottom: 65px;
+    }
+
+    .download-label {
+        margin-bottom: 18px;
+        font-size: 8px;
+        letter-spacing: 1.3px;
+    }
+
+    .download-title {
+        font-size: clamp(26px, 7vw, 32px);
+    }
+
+    .download-description {
+        margin-top: 18px;
+        font-size: 12px;
+        line-height: 1.85;
+    }
+
+    .download-actions {
+        margin-top: 22px;
+    }
+
+    .download-button {
+        min-height: 46px;
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+
+    .download-note {
+        font-size: 9px;
+    }
+
+    .download-visual {
+        max-width: 300px;
+    }
+
+    .download-phone {
+        filter:
+            drop-shadow(0 3px 3px rgb(20 5 14 / 35%))
+            drop-shadow(0 12px 9px rgb(20 5 14 / 45%));
+    }
+
+    .download-cupid {
+        left: -3%;
+        bottom: 1%;
+        width: 35%;
+
+        filter:
+            drop-shadow(0 3px 2px rgb(20 5 14 / 35%))
+            drop-shadow(0 8px 6px rgb(20 5 14 / 45%));
+    }
+}
+
+/* GIẢM CHUYỂN ĐỘNG */
+
+@media (prefers-reduced-motion: reduce) {
+    .download-button {
+        transition: none;
+    }
+}

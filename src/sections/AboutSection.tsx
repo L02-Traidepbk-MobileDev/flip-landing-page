@@ -1,6 +1,7 @@
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+
 import './About.css';
 
 const highlights = [
@@ -33,10 +34,10 @@ function AboutSection() {
         >
             <div className="about-container">
                 <div className="about-content">
-                    <p className="about-label">WHY FLIP?</p>
+                    <p className="about-label">WHAT IS FLIP?</p>
 
                     <h2 className="about-title" id="about-title">
-                        Muốn làm quen
+                        Muốn làm quen,
                         <br />
                         <em>Ngại mở lời?</em>
                     </h2>

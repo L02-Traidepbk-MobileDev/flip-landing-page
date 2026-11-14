@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
+
 import "./Hero.css";
 
 import windowImage from '../assets/images/hero/window.jpg';
 import coffeeImage from '../assets/images/hero/coffee.jpg';
-import nightImage from '../assets/images/hero/night.jpg';
+import nightImage from '../assets/images/hero/study.jpg';
 import envelopeImage from '../assets/images/hero/envelope.png';
 import badgeImage from '../assets/images/hero/badge.png';
 
@@ -20,16 +21,16 @@ const moments = [
     {
         image: coffeeImage,
         location: "Meomeow Coffee",
-        nickname: "Fan cuồng cà phê Laura",
+        nickname: "Fan cứng cà phê Laura",
         caption: "Dating girls",
         alt: "Check-in tại quán cà phê",
     },
     {
         image: nightImage,
         location: "HCMUT",
-        nickname: "Kiếp nạn thứ 36",
-        caption: "OT til die",
-        alt: "Thành phố về đêm nhìn từ trên cao",
+        nickname: "Tôi yêu PPL",
+        caption: "Die with deadlines",
+        alt: "Chạy deadline về đêm",
     }
 ]
 
@@ -43,31 +44,33 @@ function HeroSection() {
 
     return (
         <section className="hero" aria-labelledby="hero-title" id="home">
-            {/* Left */}
             <div className="hero-content">
                 <p className="hero-label">
-                    A LITTLE CURIOSITY. A NEW CONNECTION.
+                    A LITTLE CURIOSITY - A NEW CONNECTION
                 </p>
 
                 <h1 className="hero-title" id="hero-title">
-                    <span>Same place.</span>
+                    <span>Same place,</span>
                     <em>
                         Different stories.
                     </em>
                 </h1>
 
                 <p className="hero-subtitle">
-                    Một ly cà phê - một góc cửa sổ - một người cũng ở đây
+                    Một ly cà phê - một góc cửa sổ - một người cũng ở đây.
                     <br />
-                    Mọi kết nối đều có thể bắt đầu từ điều rất nhỏ
+                    Mọi kết nối đều có thể bắt đầu từ điều rất nhỏ.
                 </p>
+
+                <a className="hero-cta" href="#download">
+                    Trải nghiệm Flip
+                </a>
 
                 <p className="hero-slogan">
                     No check-in. No discovery.
                 </p>
             </div>
         
-            {/* Right */}
             <div className="hero-preview">
                 <div className="moment-stage">
                     <img
@@ -96,7 +99,7 @@ function HeroSection() {
                         />
 
                         <span className="moment-card-top">
-                            <span className="moment-anonymous">Anonymous</span>
+                            <span className="moment-anonymous">{currentMoment.nickname}</span>
 
                             <span className="moment-progress">
                                 {currentIndex + 1}/{moments.length}

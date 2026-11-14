@@ -1,38 +1,32 @@
-/* =========================
-   KHUNG SECTION
-   ========================= */
-
 .screens {
-    padding: 64px 32px;
+    padding: 72px 32px;
 }
 
 .screens-container {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1176px;
     min-width: 0;
     margin: 0 auto;
 }
 
-/* =========================
-   TIÊU ĐỀ
-   ========================= */
+/* TIÊU ĐỀ */
 
 .screens-heading {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 32px;
     margin-bottom: 36px;
 }
 
-.screens-heading>div:first-child {
+.screens-heading-content {
     min-width: 0;
 }
 
 .screens-label {
     margin: 0 0 18px;
-    color: #a56d82;
-    font-size: 11px;
+    color: #A55D75;
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 2px;
     line-height: 1.6;
@@ -40,85 +34,83 @@
 
 .screens-title {
     margin: 0;
-    color: #35212e;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(32px, 4vw, 50px);
+    color: #493641;
+    font-family: 'Playfair Display';
+    font-size: clamp(30px, 3.6vw, 48px);
     font-weight: 700;
     letter-spacing: -0.035em;
     line-height: 1.2;
 }
 
 .screens-title em {
-    color: #e91860;
+    display: block;
+    margin-top: 4px;
+    color: #E91E63;
     font-weight: inherit;
 }
 
 .screens-description {
-    margin: 20px 0 0;
+    margin: 18px 0 0;
     color: #79616e;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.8;
 }
 
-/* =========================
-   NÚT ĐIỀU HƯỚNG
-   ========================= */
+/* FIGMA VÀ BEHANCE */
 
-.screens-controls {
+.screens-design-links {
     display: flex;
     flex-shrink: 0;
+    flex-wrap: wrap;
     gap: 12px;
 }
 
-.screens-controls button {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    padding: 0;
+.screens-design-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 46px;
+    padding: 12px 24px;
 
-    border: 1px solid #e8b7c8;
-    border-radius: 50%;
-    background-color: rgb(255 250 246 / 80%);
-    color: #b45177;
-    font: inherit;
-    cursor: pointer;
+    border: 1px solid #EAA5BA;
+    border-radius: 999px;
+    background-color: rgb(255 250 246 / 85%);
+    color: #493344;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
 
     transition:
         background-color 0.2s ease,
-        opacity 0.2s ease;
+        border-color 0.2s ease;
 }
 
-.screens-controls button:hover:not(:disabled) {
-    background-color: #fce4ec;
+.screens-design-links .MuiSvgIcon-root {
+    color: #493344;
+    font-size: 19px;
 }
 
-.screens-controls button:disabled {
-    opacity: 0.5;
-    cursor: default;
+.screens-design-links a:hover {
+    border-color: #E91E63;
+    background-color: #FFDDE4;
 }
 
-.screens-controls button:focus-visible {
-    outline: 2px solid #b93258;
-    outline-offset: 4px;
-}
+/* CAROUSEL */
 
-.screens-controls .MuiSvgIcon-root {
-    font-size: 21px;
+.screens-carousel {
+    position: relative;
+    padding: 0 56px;
 }
-
-/* =========================
-   CAROUSEL
-   ========================= */
 
 .screens-gallery {
-    --card-width: 210px;
-    --side-offset: 280px;
+    --card-width: 200px;
+    --side-offset: 250px;
 
     position: relative;
     display: block;
-    height: 590px;
-    margin: -20px 0;
+    height: calc(var(--card-width) * 844 / 390 + 40px);
+    margin: 0;
     padding: 0;
     overflow: hidden;
     isolation: isolate;
@@ -127,7 +119,7 @@
 
 .screens-gallery .screen-item {
     position: absolute;
-    top: 20px;
+    top: 50%;
     left: 50%;
     display: block;
 
@@ -139,44 +131,43 @@
     transition: none;
 }
 
-/* Chỉ chuyển động khi nhấn nút */
-
 .screens-gallery.is-animating .screen-item {
     transition:
-        transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 500ms ease;
+        transform 550ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 550ms ease;
 }
 
-/* Ảnh chính giữa */
+/* Ảnh giữa */
 
 .screens-gallery .is-center {
     z-index: 3;
     opacity: 1;
-    transform: translateX(0) scale(1);
+    transform: translate(0, -50%) scale(1);
 }
 
-/* Hai ảnh bên cạnh */
+/* Ảnh trái và phải */
 
 .screens-gallery .is-left {
     z-index: 2;
     opacity: 0.65;
     transform:
-        translateX(calc(0px - var(--side-offset))) scale(0.83);
+        translate(calc(0px - var(--side-offset)), -50%) scale(0.83);
 }
 
 .screens-gallery .is-right {
     z-index: 2;
     opacity: 0.65;
-    transform: translateX(var(--side-offset)) scale(0.83);
+    transform:
+        translate(var(--side-offset), -50%) scale(0.83);
 }
 
-/* Hai ảnh chờ ngoài khung */
+/* Ảnh chờ ngoài khung */
 
 .screens-gallery .is-out-left {
     z-index: 1;
     opacity: 0;
     transform:
-        translateX(calc(-2 * var(--side-offset))) scale(0.7);
+        translate(calc(-2 * var(--side-offset)), -50%) scale(0.7);
     pointer-events: none;
 }
 
@@ -184,27 +175,22 @@
     z-index: 1;
     opacity: 0;
     transform:
-        translateX(calc(2 * var(--side-offset))) scale(0.7);
+        translate(calc(2 * var(--side-offset)), -50%) scale(0.7);
     pointer-events: none;
 }
 
-/* =========================
-   KHUNG ĐIỆN THOẠI
-   ========================= */
-
-.screen-figure {
-    margin: 0;
-}
+/* KHUNG GIAO DIỆN ĐIỆN THOẠI */
 
 .screen-phone {
+    box-sizing: border-box;
     width: 100%;
-    margin: 0 auto;
-    padding: 6px;
+    padding: 0;
+    overflow: hidden;
 
-    border: 1px solid #e6becb;
-    border-radius: 28px;
-    background-color: #fffaf6;
-    box-shadow: 0 8px 20px rgb(114 38 62 / 8%);
+    border: 3px solid #EAA5BA;
+    border-radius: 30px;
+
+    box-shadow: 0 14px 24px -8px rgb(114 38 62 / 25%);
 }
 
 .screen-phone img {
@@ -213,70 +199,172 @@
     height: auto;
     aspect-ratio: 390 / 844;
 
-    border-radius: 22px;
+    border-radius: 23px;
     object-fit: contain;
     user-select: none;
 }
 
-/* =========================
-   NỘI DUNG DƯỚI ẢNH
-   ========================= */
+/* NÚT HAI BÊN */
 
-.screen-caption {
-    padding: 18px 2px 0;
+.screens-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    border: 1px solid #EAA5BA;
+    border-radius: 50%;
+    background-color: #FFF6F7;
+    color: #A55D75;
+    font: inherit;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.screens-arrow-left {
+    left: 0;
+}
+
+.screens-arrow-right {
+    right: 0;
+}
+
+.screens-arrow .MuiSvgIcon-root {
+    font-size: 22px;
+}
+
+.screens-arrow:hover:not(:disabled) {
+    background-color: #FCE4EC;
+}
+
+.screens-arrow:disabled {
+    opacity: 0.45;
+    cursor: default;
+}
+
+.screens-arrow:focus-visible,
+.screens-design-links a:focus-visible {
+    outline: 2px solid #B93258;
+    outline-offset: 4px;
+}
+
+/* ẢNH GIAO DIỆN GIỮA */
+
+.screens-caption {
+    max-width: 520px;
+    min-height: 84px;
+    margin: 18px auto 0;
     text-align: center;
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
 }
 
-.screen-number {
-    color: #b18194;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 1px;
+.screens-caption.is-changing {
+    opacity: 0;
+    transform: translateY(6px);
 }
 
-.screen-caption h3 {
-    margin: 8px 0;
+.screens-caption h3 {
+    margin: 0;
     color: #493344;
-    font-size: 14px;
+    font-family: 'Playfair Display';
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.screens-caption h3>span:first-child {
+    color: #E91E63;
+    font-family: 'Playfair Display';
+    font-size: 18px;
     font-weight: 600;
+}
+
+.screens-caption p {
+    margin: 10px 0 0;
+    color: #A55D75;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Số đếm */
+
+.screens-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0 0;
+
+    color: #927E8A;
+    font-family: 'Playfair Display';
+    font-size: 12px;
     line-height: 1.6;
 }
 
-.screen-caption p {
-    margin: 0;
-    color: #79616e;
-    font-size: 12px;
-    line-height: 1.8;
+.screens-counter strong {
+    color: #F15185;
+    font-weight: 600;
 }
 
-.screens-hint {
-    margin: 16px 0 0;
-    color: #927585;
-    font-size: 11px;
-    line-height: 1.8;
-    text-align: center;
+.screens-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
-/* =========================
-   TABLET
-   ========================= */
+/* RESPONSIVE TABLET */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+    .screens-heading {
+        align-items: flex-start;
+    }
+
+    .screens-design-links {
+        flex-direction: column;
+    }
+
+    .screens-design-links a {
+        min-height: 44px;
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .screens-gallery {
+        --card-width: 210px;
+        --side-offset: 230px;
+    }
+}
+
+@media (max-width: 800px) {
     .screens {
         padding: 56px 24px;
     }
 
     .screens-gallery {
         --card-width: 190px;
-        --side-offset: 220px;
-
-        height: 550px;
+        --side-offset: 190px;
     }
 }
 
-/* =========================
-   ĐIỆN THOẠI
-   ========================= */
+/* RESPONSIVE ĐIỆN THOẠI */
 
 @media (max-width: 600px) {
     .screens {
@@ -285,8 +373,7 @@
 
     .screens-heading {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        gap: 22px;
         margin-bottom: 24px;
     }
 
@@ -296,45 +383,68 @@
     }
 
     .screens-title {
-        font-size: clamp(30px, 7vw, 38px);
+        font-size: clamp(29px, 7vw, 38px);
     }
 
     .screens-description {
-        font-size: 13px;
+        font-size: 12px;
     }
 
-    .screens-controls {
-        align-self: flex-end;
+    .screens-design-links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .screens-design-links a {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .screens-carousel {
+        padding: 0 44px;
     }
 
     .screens-gallery {
-        --card-width: 180px;
-        --side-offset: 185px;
+        --card-width: min(180px, 100%);
+        --side-offset: 170px;
 
-        height: 530px;
+        height: 420px;
     }
 
-    .screen-caption h3 {
-        font-size: 13px;
+    .screens-arrow {
+        width: 40px;
+        height: 40px;
     }
 
-    .screen-caption p {
-        font-size: 11px;
+    .screens-arrow .MuiSvgIcon-root {
+        font-size: 20px;
     }
 
-    .screens-hint span {
-        display: block;
+    .screens-caption {
+        min-height: 88px;
+        margin-top: 14px;
+    }
+
+    .screens-caption h3 {
+        font-size: 20px;
+    }
+
+    .screens-caption h3>span:first-child {
+        font-size: 16px;
+    }
+
+    .screens-caption p {
+        font-size: 12px;
     }
 }
 
-/* =========================
-   GIẢM CHUYỂN ĐỘNG
-   ========================= */
+/* GIẢM CHUYỂN ĐỘNG */
 
 @media (prefers-reduced-motion: reduce) {
-
     .screens-gallery.is-animating .screen-item,
-    .screens-controls button {
+    .screens-caption,
+    .screens-arrow,
+    .screens-design-links a {
         transition: none;
     }
 }

@@ -1,7 +1,3 @@
-/* =========================
-   BỐ CỤC HERO
-   ========================= */
-
 .hero {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -75,6 +71,41 @@
     line-height: 1.6;
 }
 
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+    margin-top: 30px;
+    padding: 12px 26px;
+
+    border: none;
+    border-radius: 999px;
+    background-color: #E91E63;
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 13.5px;
+    font-weight: 550;
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 6px 14px -6px rgba(235, 114, 156, 0.6);
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.hero-cta:hover {
+    background-color: #E91E63;
+    transform: translateY(-2px);
+}
+
+.hero-cta:focus-visible {
+    outline-offset: 4px;
+}
+
 .hero-slogan {
     display: flex;
     align-items: center;
@@ -97,9 +128,7 @@
     background-color: #A55D75;
 }
 
-/* =========================
-   CỘT KHOẢNH KHẮC
-   ========================= */
+/* CỘT KHOẢNH KHẮC */
 
 .hero-preview {
     width: 100%;
@@ -127,7 +156,7 @@
     pointer-events: none;
 }
 
-/* Thẻ phía sau — dùng được cho div hoặc ảnh */
+/* Thẻ phía sau */
 
 .moment-backdrop {
     position: absolute;
@@ -172,9 +201,7 @@
     object-fit: contain;
 }
 
-/* =========================
-   THẺ CHÍNH
-   ========================= */
+/* THẺ CHÍNH */
 
 .moment-card {
     position: relative;
@@ -225,10 +252,7 @@
     position: absolute;
     inset: 35% 0 0;
 
-    background: linear-gradient(to bottom,
-            transparent,
-            rgb(0 0 0 / 65%));
-
+    background: linear-gradient(to bottom, transparent, rgb(0 0 0 / 65%));
     pointer-events: none;
 }
 
@@ -304,9 +328,7 @@
     overflow-wrap: anywhere;
 }
 
-/* =========================
-   SỐ THỨ TỰ DƯỚI THẺ
-   ========================= */
+/* SỐ THỨ TỰ DƯỚI THẺ */
 
 .moment-footer {
     display: flex;
@@ -344,9 +366,7 @@
     text-align: right;
 }
 
-/* =========================
-   MÁY TÍNH BẢNG
-   ========================= */
+/* RESPONSIVE TABLET */
 
 @media (max-width: 1024px) {
     .hero {
@@ -377,9 +397,7 @@
     }
 }
 
-/* =========================
-   ĐIỆN THOẠI
-   ========================= */
+/* RESPONSIVE ĐIỆN THOẠI */
 
 @media (max-width: 480px) {
     .hero {
@@ -496,9 +514,9 @@
 /* Giảm chuyển động theo cài đặt thiết bị */
 
 @media (prefers-reduced-motion: reduce) {
-
     .moment-card,
-    .hero-link span {
+    .hero-link span,
+    .hero-cta {
         transition: none;
     }
 }

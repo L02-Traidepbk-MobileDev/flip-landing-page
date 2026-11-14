@@ -112,7 +112,7 @@
     line-height: 1.8;
 }
 
-/* Máy tính bảng */
+/* RESPONSIVE TABLET */
 
 @media (max-width: 1024px) {
     .about {
@@ -129,7 +129,7 @@
     }
 }
 
-/* Điện thoại */
+/* RESPONSIVE ĐIỆN THOẠI */
 
 @media (max-width: 480px) {
     .about {
