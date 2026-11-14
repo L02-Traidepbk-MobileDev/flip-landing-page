@@ -1,0 +1,365 @@
+.footer {
+    margin-top: 40px;
+    border-top: 1px solid #ead1da;
+    background-color: rgb(255 250 246 / 94%);
+}
+
+.footer-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* =========================
+   LIÊN KẾT THIẾT KẾ
+   ========================= */
+
+.footer-showcase {
+    padding: 44px 0;
+    border-bottom: 1px solid #ead1da;
+}
+
+.footer-showcase-heading {
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.footer-eyebrow {
+    margin: 0 0 12px;
+    color: #a56d82;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+.footer-showcase-heading h2 {
+    margin: 0;
+    color: #35212e;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.footer-showcase-heading h2 em {
+    color: #e91860;
+    font-weight: inherit;
+}
+
+.footer-showcase-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.footer-showcase-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-width: 0;
+    padding: 20px 24px;
+
+    border: 1px solid #e8bdcc;
+    border-radius: 999px;
+    background-color: #fff6f8;
+    color: #493344;
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.footer-showcase-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.footer-showcase-label {
+    color: #a56d82;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.footer-showcase-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.footer-showcase-arrow {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid #e8bdcc;
+    border-radius: 50%;
+    color: #b45177;
+}
+
+.footer-showcase-arrow .MuiSvgIcon-root {
+    font-size: 19px;
+}
+
+@media (hover: hover) {
+    a.footer-showcase-link:hover {
+        transform: translateY(-3px);
+        border-color: #dc8eaa;
+        background-color: #fce8ef;
+    }
+}
+
+/* Chưa điền link */
+
+.footer-showcase-link.is-pending {
+    position: relative;
+    border-style: dashed;
+    flex-wrap: wrap;
+}
+
+.footer-pending-note {
+    width: 100%;
+    color: #927585;
+    font-size: 10px;
+}
+
+/* =========================
+   BA CỘT THÔNG TIN
+   ========================= */
+
+.footer-main {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 56px;
+    padding: 56px 0;
+}
+
+.footer-brand,
+.footer-column {
+    min-width: 0;
+}
+
+.footer-brand>a {
+    display: inline-block;
+}
+
+.footer-logo {
+    display: block;
+    width: 80px;
+    height: auto;
+}
+
+.footer-tagline {
+    margin: 18px 0 0;
+    color: #493344;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.footer-description {
+    margin: 12px 0 0;
+    color: #927585;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-column h3 {
+    margin: 8px 0 22px;
+    color: #795266;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    line-height: 1.6;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.footer-nav a {
+    color: #79616e;
+    font-size: 12px;
+    line-height: 1.7;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    color: #e91860;
+}
+
+.footer-project-name {
+    margin: 0 0 8px;
+    color: #493344;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.footer-project-description {
+    margin: 0;
+    color: #927585;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.footer-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    color: #a34468;
+    font-size: 10px;
+}
+
+.footer-status>span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #e91860;
+}
+
+/* =========================
+   DÒNG CUỐI
+   ========================= */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    padding: 18px 0;
+    border-top: 1px solid #ead1da;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #927585;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.footer-bottom .footer-signature {
+    color: #a56d82;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.footer-back-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+
+    color: #a34468;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.footer-back-top .MuiSvgIcon-root {
+    font-size: 16px;
+}
+
+.footer-back-top:hover {
+    color: #e91860;
+}
+
+.footer a:focus-visible {
+    outline: 2px solid #b93258;
+    outline-offset: 5px;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+    .footer-main {
+        gap: 32px;
+        grid-template-columns:
+            minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .footer-showcase-link {
+        padding: 18px 20px;
+    }
+
+    .footer-showcase-title {
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   ĐIỆN THOẠI
+   ========================= */
+
+@media (max-width: 600px) {
+    .footer {
+        margin-top: 24px;
+    }
+
+    .footer-container {
+        padding: 0 20px;
+    }
+
+    .footer-showcase {
+        padding: 32px 0;
+    }
+
+    .footer-showcase-links {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .footer-showcase-heading h2 {
+        font-size: 28px;
+    }
+
+    .footer-showcase-link {
+        padding: 18px 22px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        padding: 36px 0;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-column h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-showcase-link {
+        transition: none;
+    }
+}

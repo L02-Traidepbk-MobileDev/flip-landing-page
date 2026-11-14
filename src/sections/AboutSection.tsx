@@ -8,19 +8,19 @@ const highlights = [
         icon: LocationOnOutlinedIcon,
         title: 'Có sẵn một điểm chung',
         description:
-            'Cùng một quán cà phê, thư viện hay góc tự học — bạn đã có một điều để bắt đầu câu chuyện',
+            'Cùng một không gian, cùng một thời điểm - câu chuyện có thể bắt đầu từ điều cả hai đang trải nghiệm',
     },
     {
         icon: PhotoCameraOutlinedIcon,
         title: 'Làm quen từ một khoảnh khắc',
         description:
-            'Một bức ảnh ẩn danh để chia sẻ điều bạn đang trải nghiệm, không cần nghĩ ngay một lời mở đầu thật hay',
+            'Chia sẻ một khoảnh khắc ẩn danh, thay vì phải nghĩ cách giới thiệu bản thân thật ấn tượng ngay từ đầu',
     },
     {
         icon: FavoriteBorderOutlinedIcon,
         title: 'Biết cả hai đều muốn kết nối',
         description:
-            'Chỉ mở trò chuyện khi cả hai cùng Like, giúp bạn bớt lo sự quan tâm chỉ đến từ một phía',
+            'Chỉ trò chuyện khi cả hai cùng Like, giúp bạn bớt lo mình đang làm phiền người chưa muốn kết nối',
     },
 ];
 
@@ -42,7 +42,11 @@ function AboutSection() {
                     </h2>
 
                     <p className="about-description">
-                        Flip giúp bước đầu bớt ngại ngùng: Chia sẻ một khoảnh khắc, khám phá những người cùng địa điểm và kết nối khi sự quan tâm đến từ cả hai phía
+                        Muốn bắt chuyện với một người cùng quán cà phê hay thư viện, nhưng lại ngại làm phiền hoặc bị từ chối?
+                    </p>
+
+                    <p className="about-description">
+                        Flip dành cho người trẻ, đặc biệt là sinh viên muốn mở rộng kết nối tại những không gian công cộng nhưng còn ngại chủ động tiếp cận người lạ
                     </p>
 
                     <p className="about-message">
