@@ -33,7 +33,10 @@ function Header() {
                 aria-label="Flip — Trang chủ"
                 onClick={closeMenu}
             >
-                <img src="/logo.png" alt="Flip" />
+                <img
+                    src={`${import.meta.env.BASE_URL}logo.png`}
+                    alt="Flip"
+                />
             </a>
 
             <button
