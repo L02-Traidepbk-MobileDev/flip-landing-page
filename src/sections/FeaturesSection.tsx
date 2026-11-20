@@ -6,25 +6,21 @@ const features = [
 {
     title: 'Cùng một địa điểm',
     description: 'Khám phá người cùng nơi bạn check-in, không hiển thị tọa độ hay khoảng cách chính xác.',
-    tag: 'Kết nối tại nơi bạn đang ở',
 },
 
 {
     title: 'Ẩn danh trong 2 giờ',
     description: 'Chia sẻ ảnh cùng vài dòng cảm xúc. Khoảnh khắc tự hết hạn sau 2 giờ.',
-    tag: 'Khoảnh khắc thay lời giới thiệu',
 },
 
 {
     title: 'Cùng Like, mới Chat',
     description: 'Like hoặc Pass theo cảm nhận. Cuộc trò chuyện chỉ mở khi cả hai cùng thích.',
-    tag: 'Sự quan tâm từ hai phía',
 },
 
 {
     title: 'Kết nối có trách nhiệm',
     description: 'Báo cáo nội dung không phù hợp, cùng giữ một không gian làm quen tôn trọng nhau.',
-    tag: 'Có báo cáo và kiểm duyệt',
 }
 ];
 
@@ -55,7 +51,6 @@ function FeaturesSection() {
                             <li className="feature-card" key={ feature.title }> 
                             <h3>{ feature.title }</h3> 
                             <p className="feature-description" >{feature.description }</p> 
-                            <span className="feature-tag" > { feature.tag } </span> 
                         </li>
                         );
                     })

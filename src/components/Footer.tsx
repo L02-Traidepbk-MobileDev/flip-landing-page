@@ -9,13 +9,13 @@ const sections = [
     { href: '#features', label: 'Điểm nổi bật' },
     { href: '#how-it-works', label: 'Cách hoạt động' },
     { href: '#screens', label: 'Giao diện' },
-    { href: '#download', label: 'Trải nghiệm Flip' },
+    { href: '#faq', label: 'Q&A' },
 ];
 
 const projectLinks = {
     github: 'https://github.com/L02-Traidepbk-MobileDev',
-    figma: 'https://www.figma.com/design/yr3gjsYqZvOF4a8z3GoTZw/Flip-Figma-Temporary',
-    behance: 'https://www.behance.net/',
+    figma: 'https://www.figma.com/design/9uEJoNMUDG2l35DSSNmpHw/Flip---L02-Traidepbk',
+    behance: 'https://www.behance.net/gallery/258746423/FLIP-Anonymous-Location-Based-Social-App',
 };
 
 function Footer() {

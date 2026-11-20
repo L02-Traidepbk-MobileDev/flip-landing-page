@@ -53,7 +53,7 @@
 
 .footer-description {
     margin: 10px 0 0;
-    color: #493641;
+    color: #604A57;
     font-family: 'Playfair Display';
     font-size: 12px;
     line-height: 1.8;
@@ -80,7 +80,7 @@
     border: none;
     border-radius: 8px;
     background-color: transparent;
-    color: #620D2A;
+    color: #A55D75;
     text-decoration: none;
 
     transition:
@@ -134,7 +134,7 @@
 
 .footer-links a {
     display: inline-block;
-    color: #493641;
+    color: #604a57;
     font-size: 12px;
     line-height: 1.8;
     text-decoration: none;
@@ -152,7 +152,7 @@
 
 .footer-project {
     margin: 0;
-    color: #493641;
+    color: #604a57;
     font-size: 12px;
     font-weight: 600;
     line-height: 1.9;

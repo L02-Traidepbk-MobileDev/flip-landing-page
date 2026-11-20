@@ -14,8 +14,9 @@ import Screen5 from '../assets/images/screens/05-match.jpg';
 import Screen6 from '../assets/images/screens/06-chat.png';
 import Screen7 from '../assets/images/screens/07-bio.jpg';
 
-const FIGMA_URL = 'https://www.figma.com/design/9uEJoNMUDG2l35DSSNmpHw/Flip---L02-Traidepbk?node-id=0-1&t=UyNndVK7sB9Jqq2M-1';
-const BEHANCE_URL = 'https://www.behance.net/';
+
+const FIGMA_URL = 'https://www.figma.com/design/9uEJoNMUDG2l35DSSNmpHw/Flip---L02-Traidepbk';
+const BEHANCE_URL = 'https://www.behance.net/gallery/258746423/FLIP-Anonymous-Location-Based-Social-App';
 
 const TRANSITION_DURATION = 550;
 

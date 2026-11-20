@@ -8,6 +8,7 @@ const menuItems = [
     { href: '#features', label: 'Điểm nổi bật' },
     { href: '#how-it-works', label: 'Cách hoạt động' },
     { href: '#screens', label: 'Giao diện' },
+    { href: '#faq', label: 'Q&A' },
 ];
 
 function Header() {

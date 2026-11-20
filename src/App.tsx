@@ -7,6 +7,7 @@ import AboutSection from './sections/AboutSection';
 import FeaturesSection from './sections/FeaturesSection';
 import HowItWorksSection from './sections/HowItWorksSection';
 import ScreensSection from './sections/ScreenSection';
+import FAQSection from './sections/FAQSection';
 import DownloadSection from './sections/DownloadSection';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <FeaturesSection />
             <HowItWorksSection />
             <ScreensSection />
+            <FAQSection />
             <DownloadSection />
         </main>
 
